@@ -1,0 +1,44 @@
+@app.route("/routes", methods=['GET','POST'])
+def routes():
+    list=[]
+    chosenroute = request.form.get('chosenroute')
+    list.append(chosenroute)
+    chosenorigin = request.form.get('chosenorigin')
+    list.append(chosenorigin)
+    chosendestination = request.form.get('chosendestination')
+    list.append(chosendestination)
+    chosenday = request.form.get('chosenday')
+    list.append(chosenday)
+    chosentime = request.form.get('chosentime')
+    list.append(chosentime)
+    chosenweather = request.form.get('chosenweather')
+    list.append(chosenweather)
+    list.append(0)
+    dataframe = pandas.read_csv('cleangps.csv')
+    array = dataframe.values
+    X = array[:,0:8]
+    Y = array[:,8]
+    test_size = 0.33
+    seed = 7
+    X_train, X_test, Y_train, Y_test = model_selection.train_test_split(X, Y, test_size=test_size, random_state=seed)
+    # Fit the model on 33%
+    model = RandomForestRegressor()  
+    model.fit(X_train, Y_train)
+    # save the model to disk
+    filename = 'finalized_model.sav'
+    pickle.dump(model, open(filename, 'wb'))
+
+    # load the model from disk
+    loaded_model = pickle.load(open(filename, 'rb'))
+    result = loaded_model.predict(list)
+    
+    with open('static/routes.json') as data_file:
+        json_file_routes = json.load(data_file)
+        
+    with open('static/routes.json') as data_file:
+        json_routes = json.load(data_file)
+        
+    with open('static/routes_and_stops.json') as data_file:
+        json_file_stops = json.load(data_file)
+    
+    return render_template("display.html", json_file_routes = json_file_routes, json_file_stops = json_file_stops, json_routes = json_routes, chosenroute = chosenroute)

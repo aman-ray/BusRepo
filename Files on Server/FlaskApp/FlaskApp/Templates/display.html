@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% block content %}
+<div id="displaydiv">
+        <h3>Estimated Total Travel Time </h3>
+            <br>
+            <br>
+<p>From Stop {{ chosenorigin }} to Stop {{ chosendestination }} using Route {{ chosenro1 }}</p>
+    <p> Estimated Travel Time : {{ times }}</p>
+
+</div>
+
+ <div id="barchart"></div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    // Load the Visualization API and the barchart package.
+  google.load('visualization', '1.0', {'packages':['corechart','bar']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart(){
+    var data = new google.visualization.DataTable();
+    data.addColumn('number', 'time');
+    data.addColumn('string', 'result');
+    data.addRows([
+        {% for time, result in data %}
+            [{{ time }}, "{{ result }}"],
+        {% endfor %}
+    ]);
+
+
+var options = {
+    chart: {
+      title: 'Travel Time',
+    },
+    width: 900,
+    height: 520,
+    hAxis: {slantedText:true, slantedTextAngle:45}
+
+  };
+
+     // Display the chart inside the <div> element with id="barchart"
+  var chart = new google.charts.Bar(document.getElementById('barchart'));
+  chart.draw(data, options);
+}
+  </script>
+{% endblock%}
+

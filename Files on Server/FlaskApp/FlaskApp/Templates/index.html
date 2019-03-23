@@ -1,0 +1,397 @@
+<html>
+    <head>
+        <title>Dublin Bus Dynamic Time Application</title>
+        <link rel="stylesheet" type="text/css" href="../static/index.css">
+<!--        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    </head>
+    <body id="body" onload="api(); api2(); startTime();">
+        <!--Header-->
+        <header id="header">
+            <img src="../static/dblogo.png" alt="logo" />
+            <h1>Dublin Bus: Journey Time Predictor <div id="clock"></div><br><div id="date"></div></h1>
+<!--            <div id="clock"></div>-->
+        </header>
+         <!--Wrapper for Page Content-->
+        <div id="wrapper">
+            <!--Weather Div to Display Live Weather Data-->
+            <div id="weather"></div>
+            
+            <!--Select boxes for data values-->
+            <div id="dropdowns">
+                <form method="post" action="{{ url_for('routes') }}" id="submit">
+
+                    <select type="button" id="route" data-toggle="dropdown" name="chosenroute">
+                    <option selected="selected" value="">Choose Route</option>
+                </select>
+                <select type="button" id="direction" data-toggle="dropdown" name="chosendirection" onclick="changeMap()"> -->
+                    <option selected="selected" value="">Choose Direction</option>
+                    <option>0</option>
+                    <option>1</option>
+                </select>
+                <select type="button" id="origin" data-toggle="dropdown" name="chosenorigin">
+                    <option selected="selected">Choose Origin</option>
+                </select>
+                <select type="button" id="destination" data-toggle="dropdown" name="chosendestination">
+                    <option selected="selected">Choose Destination</option>
+                </select>
+                    <br>
+                    <p>Day/Time:</p>
+                <select name="chosenday">
+                    <option id='0'>0: Monday</option>
+                    <option id='1'>1: Tuesday</option>
+                    <option id='2'>2: Wednesday</option>
+                    <option id='3'>3: Thursday</option>
+                    <option id='4'>4: Friday</option>
+                    <option id='5'>5: Saturday</option>
+                    <option id='6'>6: Sunday</option>
+                </select>
+                <select name="chosentime">
+                    <option>07.00</option>
+                    <option>08.00</option>
+                    <option>09.00</option>
+                    <option>10.00</option>
+                    <option>11.00</option>
+                    <option>12.00</option>
+                    <option>13.00</option>
+                    <option>14.00</option>
+                    <option>15.00</option>
+                    <option>16.00</option>
+                    <option>17.00</option>
+                    <option>18.00</option>
+                    <option>19.00</option>
+                    <option>20.00</option>
+                    <option>21.00</option>
+                    <option>22.00</option>
+                    <option>23.00</option>
+                </select>
+                    
+                <div id='weatherfeatures' style="visibility: hidden; display:none;">
+                    <select name="chosentemp" id="chosentemp">
+                    </select>
+                    <select name="chosenhumid" id="chosenhumid">
+                    </select>
+                    <select name="chosenpres" id="chosenpres">
+                    </select>
+                </div>
+                    <br>
+                    <br>
+                <input type="submit">
+                </form>
+                
+                 </div>
+            
+                <!--Map-->
+            <div id="google-map"></div>
+
+            <div id="googlecharts">
+            {% block content %}
+                {% endblock %}
+            </div>
+            <div id="twitterfeed">
+                <a class="twitter-timeline" href="https://twitter.com/aaroadwatch" height="500">Tweets by aaroadwatch</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            
+            </div> 
+<!--Footer
+            <footer id="footer">
+                <p>Team Members: Davy Shaw, Aongus Bates, Claudia Kinsella, Chen Zeng</p>
+            </footer>
+-->
+    </body>
+    
+<!--    Scripts for Page   -->
+    <!--Dynamic Dropdown List-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    var Route = ({{ route_data|tojson }});
+    var Stops = ({{ stop_data|tojson }});
+
+    var selectRoute = $('#route');
+    var selectDirection = $('#direction')
+    var selectOrigin = $('#origin');
+    var selectDestination = $('#destination');
+
+
+    for (var i = 0; i < Route.length; i++) {
+    selectRoute.append(
+        $('<option>', {
+            value: Route[i].route_id,
+            text: Route[i].route_id
+        }, '</option>'))
+    };
+
+    selectDirection.on('change',function() {
+        updateOrigin();
+        updateDestination();
+    });
+
+    function updateOrigin() {
+    selectOrigin.empty()
+    var routeselect1 = document.getElementById("route");
+    var selected1 = routeselect1.options[routeselect1.selectedIndex].value;
+
+    var directionselect1 = document.getElementById("direction");
+    var selected2 = directionselect1.options[directionselect1.selectedIndex].value;
+
+    for (var j = 0; j < Stops.length; j++) {
+        if (Stops[j].route == selected1 && Stops[j].direction == selected2) {
+            selectOrigin.append(
+                $('<option>', {
+                    value: Stops[j].stopid,
+                    text: Stops[j].stopid + " - " + Stops[j].name
+                }, '</option>'))
+            }
+        }
+    };
+
+    function updateDestination() {
+    selectDestination.empty();
+    var routeselect2 = document.getElementById("route");
+    var selected3 = routeselect2.options[routeselect2.selectedIndex].value;
+
+    var directionselect2 = document.getElementById("direction");
+    var selected4 = directionselect2.options[directionselect2.selectedIndex].value;
+
+    for (var k = 0; k < Stops.length; k++) {
+        if (Stops[k].route == selected3 && Stops[k].direction == selected4) {
+            selectDestination.append(
+                $('<option>', {
+                    value: Stops[k].stopid,
+                    text: Stops[k].stopid + " - " + Stops[k].name
+                }, '</option>'))
+            }
+        }
+    };
+    </script>
+<!--    w3schools code   -->
+        <script>
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML =
+                h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+    
+        <script>
+            n =  new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+        </script>
+    <!--Script for Live Weather Data-->
+    
+        <!--    API 1    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            function api(){
+                var api_key = '44b78ac274e9d94337e6620489fdcdbe';
+                var url = $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Dublin,IE&units=metric&APPID=" + api_key, function(data){
+            document.getElementById("weather").innerHTML = '<h4>Current Weather in Dublin</h4>' +
+                '<p>' + "Temperature: " + data.main.temp + '&deg;C' + '</p>'
+                + '<p>' + "Humidity: " + data.main.humidity + '%' + '</p>'
+                + '<p>' + "Pressure: " + data.main.pressure + 'hPa' + '</p>'
+                + '<p>' + "<img src=\"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png\">" + '</p>';
+            })
+        }
+        </script>
+    
+        <!--    API 2   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            function api2(){
+                var api_key = '44b78ac274e9d94337e6620489fdcdbe';
+                var url = $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Dublin,IE&units=metric&APPID=" + api_key, function(data){
+                    document.getElementById("chosentemp").innerHTML = '<option>'+ data.main.temp + '</option>';
+                    document.getElementById("chosenhumid").innerHTML = '<option>'+ data.main.humidity + '</option>';
+                    document.getElementById("chosenpres").innerHTML = '<option>'+ data.main.pressure + '</option>';
+                })
+            }
+        </script>
+
+
+        <!--Map Marker Script-->
+     <script>
+        function changeMap() {
+//        var c = coords[route].split(',');
+//            map.setCenter(new google.maps.LatLng(c[0], c[1]));
+//
+        var mapLocale= {
+            center:new google.maps.LatLng(53.345300, -6.275769),
+            zoom:11,
+        };
+        var map=new google.maps.Map(document.getElementById("google-map"),mapLocale);
+
+        var Stops = {{ stop_data|tojson|safe }};
+        var routeselect = document.getElementById("route");
+        var selected = routeselect.options[routeselect.selectedIndex].value;
+
+        var directionselect = document.getElementById("direction");
+        var selected5 = directionselect.options[directionselect.selectedIndex].value;
+
+        for (var i = 0; i < Stops.length; i++) {
+            if (Stops[i].route == selected && Stops[i].direction == selected5) {
+                var item = Stops[i];
+
+                var markerLatlng = new google.maps.LatLng(item.latitude, item.longitude);
+                var info = new google.maps.InfoWindow();
+                markerandinfo(item)
+
+        function markerandinfo(item){
+
+                var markerLatlng = new google.maps.LatLng(item.latitude, item.longitude); var marker = new google.maps.Marker({
+                    map: map,
+                    position: markerLatlng,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                    clickable: true
+                    });
+                marker.item = item; // store information of each item in marker
+                marker.setMap(map); // where `map` is the instance of Google Map
+                google.maps.event.addListener(marker, "click", function() {
+                    info.close()
+                    info.setContent('<b>Stop ID: </b>' + item.stopid + '<br>' + '<b>Stop Name: </b>' + item.name)
+                    info.open(map, marker)
+                });
+
+
+                google.maps.event.addListener(marker, "click", function(mark) {
+            // retrieve information using `this.item` and create dynamic HTML to show it.
+            // this.item.Post.datetime, this.item.Post.content etc.
+                    });
+            }
+            }
+        }
+         };
+    </script>
+
+
+<!--  Scripts for Map markers   -->
+    
+  <script> 
+  var infowindow;
+        
+        function myMap() {
+            var mapLocale= {
+                center:new google.maps.LatLng(53.345300, -6.275769),
+                zoom:11,
+            };
+            var map=new google.maps.Map(document.getElementById("google-map"),mapLocale);
+};
+    </script>
+    
+<!-- Script to update map based on Route Selection -->
+ <script>
+     
+    function myMap() {
+         var map = new google.maps.Map(document.getElementById('google-map'), {
+          center: {lat: 53.345300, lng: -6.275769},
+          zoom: 11});
+          google.maps.event.addListener(map, 'click', function(){
+           if(infowindow){
+             infowindow.setMap(null);
+             infowindow = null;
+           }
+      });
+    }
+
+          
+        
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showposition);}
+     
+        function showposition(position) {
+            var map = new google.maps.Map(document.getElementById('google-map'), {
+          center: {lat: 53.345300, lng: -6.275769},
+          zoom: 11});
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            latlon = new google.maps.LatLng(lat,lon)
+            var marker = new
+            google.maps.Marker({position:latlon,animation: google.maps.Animation.BOUNCE, 
+            icon:'http://maps.google.com/mapfiles/ms/icons/pink.png',
+            title:"You are here."});
+            marker.setMap(map);
+            marker.setAnimation(4);
+            
+              //add marker inside the circle
+            //google.maps.event.addListener(map, 'click', function(event) {
+        //placeMarker(map, event.latLng);});
+              var infowin = new google.maps.InfoWindow({
+                content: "You are here."
+  });
+        infowin.open(map,marker);
+            
+
+            var myCity = new google.maps.Circle({
+                center: latlon,
+                radius:500,
+                strokeColor: "#00BFFF",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#00BFFF",
+                fillOpacity: 0.4,
+                
+  });
+            myCity.setMap(map);
+            
+            //show out the stopid near your location
+        var Stops = {{ stop_data|tojson|safe }};
+
+        for (var i = 0; i < Stops.length; i++) {
+        (function (item) {
+        var pos = new google.maps.LatLng(item.latitude, item.longitude);  
+            console.log(">=" + pos);
+        var distance_from_location = google.maps.geometry.spherical.computeDistanceBetween(latlon, pos);
+            console.log(">=" + latlon);
+            console.log(">=" + distance_from_location);
+            if(distance_from_location <= 500){
+                var distance = Math.round(distance_from_location);
+                var title = String(item.stopid);
+                console.log(">=" + title);
+                var markers = new google.maps.Marker({position: pos,
+                                                    map:map,
+                                                    title: title
+                                                    });
+         
+                
+           google.maps.event.addListener(markers, 'click', function () {
+                                   
+  			infowindow = new google.maps.InfoWindow(
+            { content: '<div style="color:red">'+title +'</div>' + " is " + distance + " meters from my location",
+              size: new google.maps.Size(150,50),
+              pixelOffset: new google.maps.Size(0, -30)
+            , position: pos, map: map});
+  								});
+         
+                         // Zoom to 15 when clicking on marker
+            google.maps.event.addListener(marker,'click',function() {
+                map.setZoom(15);
+                map.setCenter(marker.getPosition());
+  });
+                
+                markers.setMap(map); 
+            }
+           
+        })(Stops[i]);
+         }
+        
+    };  
+    </script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiubTHzeKWvkVLFSWQ1MY_7yNjizKQxbU&callback=myMap&libraries=geometry"></script>
+    
+
+
+</html>

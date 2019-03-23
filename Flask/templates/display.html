@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block content %}
+    <div id="displaydiv">
+        <h3>Estimated Total Travel Time </h3>
+            <br>
+            <br>
+        <p>From Stop {{ chosenorigin }} to Stop {{ chosendestination }} using Route {{ chosenroute }}</p>
+        
+        
+        <p>{{ chosent }}</p>
+        
+        <p> {{ chosentime1 }} </p>
+        
+        <p> {{ chosentime2 }} </p>
+        
+<!--            <p> {{ result }}</p>-->
+        
+                    <p> {{ time }}</p>
+
+                    <p> {{ time2 }}</p>
+
+                    <p> {{ time3 }}</p>
+
+    </div>
+{% endblock%}

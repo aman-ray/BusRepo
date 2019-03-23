@@ -1,0 +1,602 @@
+[
+    {
+        "route_id":"1",
+        "route_name":"Strand Road - Shanard Avenue",
+        "routename_and_id":"1 - Strand Road - Shanard Avenue"
+    },
+    {
+        "route_id":"102",
+        "route_name":"Bus Interchange - DART Station",
+        "routename_and_id":"102 - Bus Interchange - DART Station"
+    },
+    {
+        "route_id":"104",
+        "route_name":"Shanard Avenue - Bus Garage",
+        "routename_and_id":"104 - Shanard Avenue - Bus Garage"
+    },
+    {
+        "route_id":"11",
+        "route_name":"Corrig Road - St. Pappin's Green",
+        "routename_and_id":"11 - Corrig Road - St. Pappin's Green"
+    },
+    {
+        "route_id":"111",
+        "route_name":"Train Station - Loughlinstown Wood",
+        "routename_and_id":"111 - Train Station - Loughlinstown Wood"
+    },
+    {
+        "route_id":"114",
+        "route_name":"Train Station - Simons Ridge",
+        "routename_and_id":"114 - Train Station - Simons Ridge"
+    },
+    {
+        "route_id":"116",
+        "route_name":"Lady of Good Council - Cholaiste Mhuire",
+        "routename_and_id":"116 - Lady of Good Council - Cholaiste Mhuire"
+    },
+    {
+        "route_id":"118",
+        "route_name":"Ballycorus Rd - D'Olier Street Junction Burgh Quay (Stop",
+        "routename_and_id":"118 - Ballycorus Rd - D'Olier Street Junction Burgh Quay (Stop"
+    },
+    {
+        "route_id":"120",
+        "route_name":"Rathbourne Way - Elgin Road",
+        "routename_and_id":"120 - Rathbourne Way - Elgin Road"
+    },
+    {
+        "route_id":"122",
+        "route_name":"Crumlin Hospital - Abbey Drive",
+        "routename_and_id":"122 - Crumlin Hospital - Abbey Drive"
+    },
+    {
+        "route_id":"123",
+        "route_name":"Ard Scoil Ris - Walkinstown Road",
+        "routename_and_id":"123 - Ard Scoil Ris - Walkinstown Road"
+    },
+    {
+        "route_id":"13",
+        "route_name":"Business Park - Bus Garage",
+        "routename_and_id":"13 - Business Park - Bus Garage"
+    },
+    {
+        "route_id":"130",
+        "route_name":"Clontarf Castle - Abbey Theatre",
+        "routename_and_id":"130 - Clontarf Castle - Abbey Theatre"
+    },
+    {
+        "route_id":"14",
+        "route_name":"Hearse Road - Kilmore Road",
+        "routename_and_id":"14 - Hearse Road - Kilmore Road"
+    },
+    {
+        "route_id":"140",
+        "route_name":"Palmerston Villas - St. Margaret's Rd",
+        "routename_and_id":"140 - Palmerston Villas - St. Margaret's Rd"
+    },
+    {
+        "route_id":"142",
+        "route_name":"Wendell Avenue - Palmerston Villas",
+        "routename_and_id":"142 - Wendell Avenue - Palmerston Villas"
+    },
+    {
+        "route_id":"145",
+        "route_name":"Rock Valley - Heuston Station",
+        "routename_and_id":"145 - Rock Valley - Heuston Station"
+    },
+    {
+        "route_id":"14C",
+        "route_name":"Hearse Road - Junction Malborough Street (Stop EE)",
+        "routename_and_id":"14C - Hearse Road - Junction Malborough Street (Stop EE)"
+    },
+    {
+        "route_id":"15",
+        "route_name":"Hunter's Avenue - Park and Ride",
+        "routename_and_id":"15 - Hunter's Avenue - Park and Ride"
+    },
+    {
+        "route_id":"150",
+        "route_name":"Church - Central Bank",
+        "routename_and_id":"150 - Church - Central Bank"
+    },
+    {
+        "route_id":"151",
+        "route_name":"Foxborough - Bargy Rd",
+        "routename_and_id":"151 - Foxborough - Bargy Rd"
+    },
+    {
+        "route_id":"15A",
+        "route_name":"Limekiln Road - Sir John Rogerson's Qy",
+        "routename_and_id":"15A - Limekiln Road - Sir John Rogerson's Qy"
+    },
+    {
+        "route_id":"15B",
+        "route_name":"Stocking Avenue Opposite Dalriada Estate - Sir John Rogerson's Qy",
+        "routename_and_id":"15B - Stocking Avenue Opposite Dalriada Estate - Sir John Rogerson's Qy"
+    },
+    {
+        "route_id":"16",
+        "route_name":"Stone Masons Way - Bus Interchange",
+        "routename_and_id":"16 - Stone Masons Way - Bus Interchange"
+    },
+    {
+        "route_id":"161",
+        "route_name":"Rockbrook Park School - Luas Station",
+        "routename_and_id":"161 - Rockbrook Park School - Luas Station"
+    },
+    {
+        "route_id":"16C",
+        "route_name":"Stone Masons Way - St. Martin's Chapel",
+        "routename_and_id":"16C - Stone Masons Way - St. Martin's Chapel"
+    },
+    {
+        "route_id":"17",
+        "route_name":"Train Station - Anthony's Road",
+        "routename_and_id":"17 - Train Station - Anthony's Road"
+    },
+    {
+        "route_id":"17A",
+        "route_name":"Naomh Barrog GAA Club - Blanchardstown",
+        "routename_and_id":"17A - Naomh Barrog GAA Club - Blanchardstown"
+    },
+    {
+        "route_id":"18",
+        "route_name":"Strand Road - Hollyville Lawn",
+        "routename_and_id":"18 - Strand Road - Hollyville Lawn"
+    },
+    {
+        "route_id":"184",
+        "route_name":"Newcastle Hospital - Rail Station",
+        "routename_and_id":"184 - Newcastle Hospital - Rail Station"
+    },
+    {
+        "route_id":"185",
+        "route_name":"Enniskerry Golf Club - Rail Station",
+        "routename_and_id":"185 - Enniskerry Golf Club - Rail Station"
+    },
+    {
+        "route_id":"220",
+        "route_name":"F\u00c1S Centre - Shangan Crescent",
+        "routename_and_id":"220 - F\u00c1S Centre - Shangan Crescent"
+    },
+    {
+        "route_id":"236",
+        "route_name":"Blanchardstown - Blanchardstown",
+        "routename_and_id":"236 - Blanchardstown - Blanchardstown"
+    },
+    {
+        "route_id":"238",
+        "route_name":"F\u00c1S Centre - Carlton Hotel",
+        "routename_and_id":"238 - F\u00c1S Centre - Carlton Hotel"
+    },
+    {
+        "route_id":"239",
+        "route_name":"Liffey Valley Shop Cen - Blanchardstown",
+        "routename_and_id":"239 - Liffey Valley Shop Cen - Blanchardstown"
+    },
+    {
+        "route_id":"25",
+        "route_name":"Meadowview Grove - Junction Merrion Square West",
+        "routename_and_id":"25 - Meadowview Grove - Junction Merrion Square West"
+    },
+    {
+        "route_id":"25A",
+        "route_name":"Esker Drive - Junction Merrion Square West",
+        "routename_and_id":"25A - Esker Drive - Junction Merrion Square West"
+    },
+    {
+        "route_id":"25B",
+        "route_name":"Rail Station - Junction Merrion Square West",
+        "routename_and_id":"25B - Rail Station - Junction Merrion Square West"
+    },
+    {
+        "route_id":"25X",
+        "route_name":"Kew Park - University College Dublin",
+        "routename_and_id":"25X - Kew Park - University College Dublin"
+    },
+    {
+        "route_id":"26",
+        "route_name":"Palmerstown Cemetery - Junction Merrion Square West",
+        "routename_and_id":"26 - Palmerstown Cemetery - Junction Merrion Square West"
+    },
+    {
+        "route_id":"27",
+        "route_name":"Cloonmore Drive - Clare Hall Estate",
+        "routename_and_id":"27 - Cloonmore Drive - Clare Hall Estate"
+    },
+    {
+        "route_id":"270",
+        "route_name":"Navan Road - Blanchardstown",
+        "routename_and_id":"270 - Navan Road - Blanchardstown"
+    },
+    {
+        "route_id":"27A",
+        "route_name":"GAA Sports Ground - Abbey Theatre",
+        "routename_and_id":"27A - GAA Sports Ground - Abbey Theatre"
+    },
+    {
+        "route_id":"27B",
+        "route_name":"Bus Garage - Abbey Theatre",
+        "routename_and_id":"27B - Bus Garage - Abbey Theatre"
+    },
+    {
+        "route_id":"27X",
+        "route_name":"Clare Hall Estate - University College Dublin",
+        "routename_and_id":"27X - Clare Hall Estate - University College Dublin"
+    },
+    {
+        "route_id":"29A",
+        "route_name":"Willie Nolan Road - Abbey Theatre",
+        "routename_and_id":"29A - Willie Nolan Road - Abbey Theatre"
+    },
+    {
+        "route_id":"31",
+        "route_name":"Howth Summit - Abbey Theatre",
+        "routename_and_id":"31 - Howth Summit - Abbey Theatre"
+    },
+    {
+        "route_id":"31A",
+        "route_name":"Sutton Castle - Abbey Theatre",
+        "routename_and_id":"31A - Sutton Castle - Abbey Theatre"
+    },
+    {
+        "route_id":"31B",
+        "route_name":"DART Station - Abbey Theatre",
+        "routename_and_id":"31B - DART Station - Abbey Theatre"
+    },
+    {
+        "route_id":"32",
+        "route_name":"St. James's Terrace - Abbey Theatre",
+        "routename_and_id":"32 - St. James's Terrace - Abbey Theatre"
+    },
+    {
+        "route_id":"32X",
+        "route_name":"Millview Road - University College Dublin",
+        "routename_and_id":"32X - Millview Road - University College Dublin"
+    },
+    {
+        "route_id":"33",
+        "route_name":"St. Paul's Crescent - Irish Life Mall",
+        "routename_and_id":"33 - St. Paul's Crescent - Irish Life Mall"
+    },
+    {
+        "route_id":"332",
+        "route_name":"Donabate Station - Opposite the Burrow Estate",
+        "routename_and_id":"332 - Donabate Station - Opposite the Burrow Estate"
+    },
+    {
+        "route_id":"33A",
+        "route_name":"St. Paul's Crescent - Cholaiste Choilm",
+        "routename_and_id":"33A - St. Paul's Crescent - Cholaiste Choilm"
+    },
+    {
+        "route_id":"33B",
+        "route_name":"Opposite the Burrow Estate - Pavillions",
+        "routename_and_id":"33B - Opposite the Burrow Estate - Pavillions"
+    },
+    {
+        "route_id":"33X",
+        "route_name":"Barnageeragh Road - Huguenot Cemetery",
+        "routename_and_id":"33X - Barnageeragh Road - Huguenot Cemetery"
+    },
+    {
+        "route_id":"37",
+        "route_name":"Blanchardstown - Mespil Road",
+        "routename_and_id":"37 - Blanchardstown - Mespil Road"
+    },
+    {
+        "route_id":"38",
+        "route_name":"I.B.M. - Mespil Road",
+        "routename_and_id":"38 - I.B.M. - Mespil Road"
+    },
+    {
+        "route_id":"38A",
+        "route_name":"I.B.M. - Mespil Road",
+        "routename_and_id":"38A - I.B.M. - Mespil Road"
+    },
+    {
+        "route_id":"38B",
+        "route_name":"I.B.M. - Mespil Road",
+        "routename_and_id":"38B - I.B.M. - Mespil Road"
+    },
+    {
+        "route_id":"38D",
+        "route_name":"I.B.M. - Mespil Road",
+        "routename_and_id":"38D - I.B.M. - Mespil Road"
+    },
+    {
+        "route_id":"39",
+        "route_name":"Hansfield Road - Mespil Road",
+        "routename_and_id":"39 - Hansfield Road - Mespil Road"
+    },
+    {
+        "route_id":"39A",
+        "route_name":"Hansfield Road - University College Dublin",
+        "routename_and_id":"39A - Hansfield Road - University College Dublin"
+    },
+    {
+        "route_id":"4",
+        "route_name":"Richmond Grove - Bus Garage",
+        "routename_and_id":"4 - Richmond Grove - Bus Garage"
+    },
+    {
+        "route_id":"40",
+        "route_name":"Liffey Valley Shop Cen - Seamus Ennis Rd",
+        "routename_and_id":"40 - Liffey Valley Shop Cen - Seamus Ennis Rd"
+    },
+    {
+        "route_id":"40B",
+        "route_name":"River Meade Avenue - Cumberland Street",
+        "routename_and_id":"40B - River Meade Avenue - Cumberland Street"
+    },
+    {
+        "route_id":"40D",
+        "route_name":"Carlton Hotel - Cumberland Street",
+        "routename_and_id":"40D - Carlton Hotel - Cumberland Street"
+    },
+    {
+        "route_id":"41",
+        "route_name":"Abbeyvale - Irish Life Mall",
+        "routename_and_id":"41 - Abbeyvale - Irish Life Mall"
+    },
+    {
+        "route_id":"41A",
+        "route_name":"Abbeyvale - Irish Life Mall",
+        "routename_and_id":"41A - Abbeyvale - Irish Life Mall"
+    },
+    {
+        "route_id":"41B",
+        "route_name":"Cemetery - Irish Life Mall",
+        "routename_and_id":"41B - Cemetery - Irish Life Mall"
+    },
+    {
+        "route_id":"41C",
+        "route_name":"Abbeyvale - Irish Life Mall",
+        "routename_and_id":"41C - Abbeyvale - Irish Life Mall"
+    },
+    {
+        "route_id":"41X",
+        "route_name":"Abbeyvale - University College Dublin",
+        "routename_and_id":"41X - Abbeyvale - University College Dublin"
+    },
+    {
+        "route_id":"42",
+        "route_name":"Wendell Avenue - Abbey Theatre",
+        "routename_and_id":"42 - Wendell Avenue - Abbey Theatre"
+    },
+    {
+        "route_id":"43",
+        "route_name":"Applewood Avenue - Abbey Theatre",
+        "routename_and_id":"43 - Applewood Avenue - Abbey Theatre"
+    },
+    {
+        "route_id":"44",
+        "route_name":"Town Hall - Glentow Road",
+        "routename_and_id":"44 - Town Hall - Glentow Road"
+    },
+    {
+        "route_id":"44B",
+        "route_name":"Hill View - Luas Station",
+        "routename_and_id":"44B - Hill View - Luas Station"
+    },
+    {
+        "route_id":"45A",
+        "route_name":"Rock Valley - Train Station",
+        "routename_and_id":"45A - Rock Valley - Train Station"
+    },
+    {
+        "route_id":"46A",
+        "route_name":"Train Station - Phoenix Pk Gate",
+        "routename_and_id":"46A - Train Station - Phoenix Pk Gate"
+    },
+    {
+        "route_id":"46E",
+        "route_name":"Train Station - Mountjoy Sq Nth",
+        "routename_and_id":"46E - Train Station - Mountjoy Sq Nth"
+    },
+    {
+        "route_id":"47",
+        "route_name":"Belarmine Plaza - Central Bank",
+        "routename_and_id":"47 - Belarmine Plaza - Central Bank"
+    },
+    {
+        "route_id":"49",
+        "route_name":"Cloonmore Drive - Grand Canal Quay",
+        "routename_and_id":"49 - Cloonmore Drive - Grand Canal Quay"
+    },
+    {
+        "route_id":"51D",
+        "route_name":"Laurel Park - Pembroke Lane",
+        "routename_and_id":"51D - Laurel Park - Pembroke Lane"
+    },
+    {
+        "route_id":"51X",
+        "route_name":"Dunawley - University College Dublin",
+        "routename_and_id":"51X - Dunawley - University College Dublin"
+    },
+    {
+        "route_id":"53",
+        "route_name":"Alexandra Road Irish Ferries Terminal - Gardiner Street",
+        "routename_and_id":"53 - Alexandra Road Irish Ferries Terminal - Gardiner Street"
+    },
+    {
+        "route_id":"54A",
+        "route_name":"Marlfield - Grand Canal Quay",
+        "routename_and_id":"54A - Marlfield - Grand Canal Quay"
+    },
+    {
+        "route_id":"56A",
+        "route_name":"The Square - Barrow Street",
+        "routename_and_id":"56A - The Square - Barrow Street"
+    },
+    {
+        "route_id":"59",
+        "route_name":"Mackintosh Park - Train Station",
+        "routename_and_id":"59 - Mackintosh Park - Train Station"
+    },
+    {
+        "route_id":"61",
+        "route_name":"Rockbrook Park School - Hawkins Street",
+        "routename_and_id":"61 - Rockbrook Park School - Hawkins Street"
+    },
+    {
+        "route_id":"63",
+        "route_name":"Ballycorus Rd - Train Station",
+        "routename_and_id":"63 - Ballycorus Rd - Train Station"
+    },
+    {
+        "route_id":"65",
+        "route_name":"Valleymount Road - Hawkin House",
+        "routename_and_id":"65 - Valleymount Road - Hawkin House"
+    },
+    {
+        "route_id":"65B",
+        "route_name":"Bianconi Avenue - Hawkin House",
+        "routename_and_id":"65B - Bianconi Avenue - Hawkin House"
+    },
+    {
+        "route_id":"66",
+        "route_name":"Kingsbury - Junction Merrion Square West",
+        "routename_and_id":"66 - Kingsbury - Junction Merrion Square West"
+    },
+    {
+        "route_id":"66A",
+        "route_name":"River Forest - Junction Merrion Square West",
+        "routename_and_id":"66A - River Forest - Junction Merrion Square West"
+    },
+    {
+        "route_id":"66B",
+        "route_name":"Alensgrove - Junction Merrion Square West",
+        "routename_and_id":"66B - Alensgrove - Junction Merrion Square West"
+    },
+    {
+        "route_id":"66X",
+        "route_name":"Kingsbury - University College Dublin",
+        "routename_and_id":"66X - Kingsbury - University College Dublin"
+    },
+    {
+        "route_id":"67",
+        "route_name":"Maynooth Station - Junction Merrion Square West",
+        "routename_and_id":"67 - Maynooth Station - Junction Merrion Square West"
+    },
+    {
+        "route_id":"67X",
+        "route_name":"Salesian College - University College Dublin",
+        "routename_and_id":"67X - Salesian College - University College Dublin"
+    },
+    {
+        "route_id":"68",
+        "route_name":"Business Park - Hawkin House",
+        "routename_and_id":"68 - Business Park - Hawkin House"
+    },
+    {
+        "route_id":"68A",
+        "route_name":"Luby Road - Hawkin House",
+        "routename_and_id":"68A - Luby Road - Hawkin House"
+    },
+    {
+        "route_id":"69",
+        "route_name":"Community School - Hawkin House",
+        "routename_and_id":"69 - Community School - Hawkin House"
+    },
+    {
+        "route_id":"69X",
+        "route_name":"Community School - Hawkin House",
+        "routename_and_id":"69X - Community School - Hawkin House"
+    },
+    {
+        "route_id":"7",
+        "route_name":"Loughlinstown Wood - Mountjoy Sq Nth",
+        "routename_and_id":"7 - Loughlinstown Wood - Mountjoy Sq Nth"
+    },
+    {
+        "route_id":"70",
+        "route_name":"Navan Road - Mespil Road",
+        "routename_and_id":"70 - Navan Road - Mespil Road"
+    },
+    {
+        "route_id":"747",
+        "route_name":"Bus Interchange - Heuston Station",
+        "routename_and_id":"747 - Bus Interchange - Heuston Station"
+    },
+    {
+        "route_id":"75",
+        "route_name":"Train Station - The Square",
+        "routename_and_id":"75 - Train Station - The Square"
+    },
+    {
+        "route_id":"76",
+        "route_name":"The Square - Glenaulin",
+        "routename_and_id":"76 - The Square - Glenaulin"
+    },
+    {
+        "route_id":"76A",
+        "route_name":"The Square - Blanchardstown",
+        "routename_and_id":"76A - The Square - Blanchardstown"
+    },
+    {
+        "route_id":"77A",
+        "route_name":"Bianconi Avenue - Barrow Street",
+        "routename_and_id":"77A - Bianconi Avenue - Barrow Street"
+    },
+    {
+        "route_id":"79",
+        "route_name":"Spiddal Park - Aston Place",
+        "routename_and_id":"79 - Spiddal Park - Aston Place"
+    },
+    {
+        "route_id":"79A",
+        "route_name":"Park West Road - Aston Place",
+        "routename_and_id":"79A - Park West Road - Aston Place"
+    },
+    {
+        "route_id":"7B",
+        "route_name":"Shanganagh Road - Mountjoy Sq Nth",
+        "routename_and_id":"7B - Shanganagh Road - Mountjoy Sq Nth"
+    },
+    {
+        "route_id":"7D",
+        "route_name":"Church Road - Mountjoy Sq Nth",
+        "routename_and_id":"7D - Church Road - Mountjoy Sq Nth"
+    },
+    {
+        "route_id":"8",
+        "route_name":"Church Road - Mountjoy Sq Nth",
+        "routename_and_id":"8 - Church Road - Mountjoy Sq Nth"
+    },
+    {
+        "route_id":"83",
+        "route_name":"Stannaway Court - Bus Garage",
+        "routename_and_id":"83 - Stannaway Court - Bus Garage"
+    },
+    {
+        "route_id":"83A",
+        "route_name":"Stannaway Court - Bus Garage",
+        "routename_and_id":"83A - Stannaway Court - Bus Garage"
+    },
+    {
+        "route_id":"84",
+        "route_name":"Sea Road - Frascati Road",
+        "routename_and_id":"84 - Sea Road - Frascati Road"
+    },
+    {
+        "route_id":"84A",
+        "route_name":"Rail Station - RDS",
+        "routename_and_id":"84A - Rail Station - RDS"
+    },
+    {
+        "route_id":"84X",
+        "route_name":"Sea Road - Fleet Street",
+        "routename_and_id":"84X - Sea Road - Fleet Street"
+    },
+    {
+        "route_id":"86",
+        "route_name":"Cholaiste Mhuire - Rochestown Avenue Opposite Granitefield",
+        "routename_and_id":"86 - Cholaiste Mhuire - Rochestown Avenue Opposite Granitefield"
+    },
+    {
+        "route_id":"9",
+        "route_name":"Greenhills College - Lanesborough",
+        "routename_and_id":"9 - Greenhills College - Lanesborough"
+    }
+]
